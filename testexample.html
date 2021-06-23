@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style media="screen">
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    width: 960px;
+    margin: auto;
+  }
+
+  text {
+    font: 10px sans-serif;
+  }
+
+  form {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  button {
+    position : relative;
+    left: 130px;
+    margin-left: 10px;
+  }
+
+  div.container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+  .content {
+    position: relative;
+    top: 10%;
+    left: 50%;
+  }
+</style>
+
+<script>
+$(function() {
+			$("button").on("click", function() {
+          var str = $(this).attr("value");
+          $(str).siblings("div").fadeOut(200);
+          $(str).delay(200).fadeIn(200);
+			});
+		});
+</script>
+
+</head>
+<body>
+  <div class="container">
+    <div id="PIE1" class="content" style="display:block;"></div>
+    <div id="PIE2" class="content" style="display:none;"></div>
+    <div id="CAT1" class="content" style="display:none;"></div>
+
+    <div class="content">
+      <button id="pie1_button" value="#PIE1">PIE1</button>
+      <button id="pie2_button" value="#PIE2">PIE2</button>
+      <button id="cat1_button" value="#CAT1">CAT1</button>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+<script type="text/javascript" src="pie1.js"></script>
+<script type="text/javascript" src="pie2.js"></script>
+<script type="text/javascript" src="cat1.js"></script>
+</html>
